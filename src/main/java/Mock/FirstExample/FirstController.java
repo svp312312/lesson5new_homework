@@ -9,7 +9,6 @@
 //3. Для GET запроса реализовать в случае id>10 and 1d<50 время задержки =1000мс, во всех остальных случаях =500мс.
 package Mock.FirstExample;
 
-
 import jakarta.annotation.PostConstruct;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +20,7 @@ import java.nio.file.Path;
 import java.util.Map;
 
 @RestController
-//@RequestMapping(value = "/api")
+
 public class FirstController {
 
     String body;
@@ -57,39 +56,6 @@ public class FirstController {
         return ResponseEntity.ok(body);
     }
 
-//           @GetMapping(value = "/appHead/test")
-//    public ResponseEntity getStatus(@RequestParam(name = "id") String id){
-//
-//               return ResponseEntity.ok(id);
-//       }
-
-//       @GetMapping(value = "/appHead/checkAge")
-//    public ResponseEntity getStatus(@RequestParam(name = "age") Integer age){
-//        if(age <= 0){
-//            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Invalid age");
-//        }
-//           return ResponseEntity.ok(age);
-//       }
-
-//    @GetMapping(value = "/appHead/ListHeader")
-//    public ResponseEntity getStatus(@RequestHeader Map<String, String> listHeader){
-//        for (Map.Entry<String, String> pair : listHeader.entrySet()) {
-//        System.out.println(pair.getKey() + " " + pair.getValue());
-//        }
-//        return ResponseEntity.ok(123);
-//    }
-
-//    @PostMapping(value = "/app/v1/postRequest")
-//    public String updateStatus(@RequestBody String body) {
-//        System.out.println(body);
-//        return"200 OK";
-//    }
-//    @PostMapping(value = "/app/v1/postRequest")
-//    public String updateStatus(@RequestBody Person body) {
-//        System.out.println(body);
-//        return"200 OK";
-//    }
-
     @PostMapping(value = "/app/v1/postRequest")
     public String updateStatus(@RequestBody Person body) {
         System.out.println(body);
@@ -103,14 +69,6 @@ public class FirstController {
         return postBody;
     }
 
-//    @PostMapping(value = "/app/v1/postRequest")
-//    public Object updateStatus(@RequestBody Person person) {
-//        Employee employee = new Employee();
-//        employee.setName(person.getName());
-//        employee.setSurname(person.getSurname());
-//        employee.setDepartment("IT");
-//        return employee;
-//    }
-//
+
 }
 
