@@ -62,7 +62,7 @@ public class FirstController {
         String name = person.getName();
         String surname = person.getSurname();
         Integer age = person.getAge();
-        if ((name == "") || (surname == "") || (age == null)) {
+        if ((name == null) || (surname == null) || (age == null)) {
             ResponseEntity valueIsNull = ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Value is null");
             return valueIsNull;
         }
